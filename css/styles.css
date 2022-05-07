@@ -791,9 +791,9 @@ img {
   outline: none;
 }
 
-.form-comment {
+/* .form-comment {
   outline: none;
-}
+} */
 
 .form-comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
