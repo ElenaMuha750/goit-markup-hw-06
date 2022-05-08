@@ -769,6 +769,8 @@ img {
   margin-bottom: 12px;
 }
 
+/*---------------- Формы ------------------*/
+
 .form-lable {
   position: relative;
   display: block;
@@ -789,11 +791,25 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border var(--transition-duration) var(--timing-function);
 }
 
-/* .form-comment {
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.form-input:focus ~ .modal-icon {
+  fill: var(--accent-color);
+}
+
+.form-comment {
   outline: none;
-} */
+  transition: border var(--transition-duration) var(--timing-function);
+}
+
+.form-comment:focus {
+  border-color: var(--accent-color);
+}
 
 .form-comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -816,8 +832,10 @@ img {
   bottom: 11px;
 
   fill: var(--main-title-color);
-  /* transition: fill 250ms var(--timing-function); */
+  transition: fill var(--transition-duration) var(--timing-function);
 }
+
+/* ------------------Textarea---------------- */
 
 .comment-label {
   position: relative;
@@ -838,18 +856,83 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  /* transition: border 250ms var(--timing-function); */
-  /* color: var(--primari-text-color); */
+  transition: border var(--transition-duration) var(--timing-function);
 }
 
-.check-label {
-  display: block;
-  margin-bottom: 30px;
-}
+/* ---------------Чекбокс----------------- */
 
 .check-policy {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+.icon-mod {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+  transition: background-color var(--transition-duration) var(--timing-function);
+}
+
+.check-icon {
+  fill: transparent;
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.check-input:checked + .check-policy .icon-mod {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.check-input:checked + .check-policy .check-icon {
+  fill: var(--primary-white-color);
+}
+
+.check-condition {
+  color: var(--accent-color);
+}
+
+/* ----------Кнопка форм ----------------*/
+
+.form-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: 4px;
+  border: none;
+  min-width: 200px;
+  height: 50px;
+
+  font-family: inherit;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--transition-duration) var(--timing-function);
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--hover-button);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
