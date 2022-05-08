@@ -508,32 +508,34 @@
 
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="modal-form">
-          <label class="form-lable">
-            <input type="text" name="name" class="form-input" />
-            <span class="form-text">Имя</span>
+          
+          <div class="form-field">
+          <label for="user-name" class="form-lable">Имя</label>
+            <input type="text" id="user-name" name="name" class="form-input" required minlength="3"/>            
             <svg class="modal-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-name"></use>
-            </svg>
-          </label>
-
-          <label class="form-lable">
-            <input type="tel" name="tel" class="form-input" />
-            <span class="form-text">Телефон</span>
-            <svg class="modal-icon" width="18px" height="18px">
+            </svg>          
+          </div>
+         
+          <div class="form-field">
+          <label for="user-tel" class="form-lable">Телефон</label>
+            <input type="tel" id="user-tel" name="tel" class="form-input" />
+               <svg class="modal-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-tel"></use>
             </svg>
-          </label>
+           </div>
 
-          <label class="form-lable">
-            <input type="email" name="email" class="form-input" />
-            <span class="form-text">Почта</span>
-            <svg class="modal-icon" width="18px" height="18px">
+           <div class="form-field">
+          <label for="user-email" class="form-lable">Почта</label>
+            <input type="email" id="user-email" name="email" class="form-input" required />
+              <svg class="modal-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
-          </label>
+            </div>
+          
 
           <label class="comment-label">
-            <span class="form-text">Комментарий</span>
+            <span class="form-lable">Комментарий</span>
             <textarea
               class="form-comment"
               name="comment"
@@ -553,7 +555,7 @@
 
             <label for="check-input" class="check-policy">
               <span class="icon-mod">
-                <svg class="check-icon" width="11px" height="8px">
+                <svg class="check-icon" width="16px" height="15px">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>

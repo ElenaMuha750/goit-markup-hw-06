@@ -602,8 +602,7 @@ img {
   outline: none;
 }
 
-.sub-email::placeholder,
-.sub-email:focus-visible {
+.sub-email::placeholder {
   font-size: 16px;
   line-height: 1.25;
 
@@ -611,6 +610,10 @@ img {
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-email:focus-visible {
+  color: var(--primary-white-color);
 }
 
 .sub-btn {
@@ -799,11 +802,16 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: var(--primary-white-color);
+  outline: none;
 }
 
 .close-icon {
   fill: #000000;
   transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.modal-close-btn:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .close-icon:hover {
@@ -822,25 +830,29 @@ img {
 
 /*---------------- Формы ------------------*/
 
-.form-lable {
+.form-field {
   position: relative;
-  display: block;
-  margin-bottom: 10px;
+}
 
-  width: 100%;
-  height: 58px;
+.form-lable {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
 }
 
 .form-input {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
   width: 100%;
   height: 40px;
+  margin-bottom: 10px;
   padding-left: 42px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  box-sizing: border-box;
   outline: none;
   transition: border var(--transition-duration) var(--timing-function);
 }
@@ -849,7 +861,7 @@ img {
   border-color: var(--accent-color);
 }
 
-.form-input:focus ~ .modal-icon {
+.form-input:focus + .modal-icon {
   fill: var(--accent-color);
 }
 
@@ -866,21 +878,11 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--main-text-color);
-}
-
 .modal-icon {
   position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
   left: 12px;
-  bottom: 11px;
 
   fill: var(--main-title-color);
   transition: fill var(--transition-duration) var(--timing-function);
@@ -955,7 +957,7 @@ img {
   color: var(--accent-color);
 }
 
-/* ----------Кнопка форм ----------------*/
+/* ----------Кнопка отправки форм ----------------*/
 
 .form-button {
   position: absolute;
