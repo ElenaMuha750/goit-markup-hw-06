@@ -956,8 +956,14 @@ img {
 /* ----------Кнопка отправки форм ----------------*/
 
 .form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* .form-button {
   position: absolute;
-  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
