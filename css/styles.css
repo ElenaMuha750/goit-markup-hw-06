@@ -827,8 +827,11 @@ img {
 /*---------------- Формы ------------------*/
 
 .form-field {
-  position: relative;
   margin-bottom: 10px;
+}
+
+.modal-input-wrap {
+  position: relative;
 }
 
 .form-lable {
@@ -878,7 +881,7 @@ img {
   position: absolute;
   left: 12px;
   top: 50%;
-  transform: translateY(-0%);
+  transform: translateY(-50%);
 
   fill: var(--main-title-color);
   transition: fill var(--transition-duration) var(--timing-function);
