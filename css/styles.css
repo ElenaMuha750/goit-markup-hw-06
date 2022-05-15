@@ -183,8 +183,8 @@ img {
   fill: var(--main-text-color);
 }
 
-.contact-item-icon:hover .icon,
-.contact-item-icone:focus .icon {
+.contact-link:hover .icon,
+.contact-link:focus .icon {
   fill: var(--accent-color);
 }
 
